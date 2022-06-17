@@ -4,20 +4,15 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.os.StrictMode;
 import android.provider.BaseColumns;
+import android.util.Log;
 
 import androidx.annotation.Nullable;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.URL;
-
-import javax.net.ssl.HttpsURLConnection;
 
 public class DBOpenHelper extends SQLiteOpenHelper {
 
@@ -65,11 +60,11 @@ public class DBOpenHelper extends SQLiteOpenHelper {
 
     public static void initKittens(SQLiteDatabase db) {
         db.execSQL(CREATE_KITTENS);
-        insertKitten(db, R.drawable.carthusian, "Carthusian", 15.f);
-        insertKitten(db, R.drawable.exotic_shorthair, "Exotic", 25.f);
-        insertKitten(db, R.drawable.persian, "Persian", 20.f);
-        insertKitten(db, R.drawable.siamese, "Siamese", 40.f);
-        insertKitten(db, R.drawable.sphynx, "Sphynx", 100.f);
+        Log.i("Entry", String.valueOf(insertKitten(db, R.drawable.carthusian, "Carthusian", 15.f)));
+        Log.i("Entry", String.valueOf(insertKitten(db, R.drawable.exotic_shorthair, "Exotic", 25.f)));
+        Log.i("Entry", String.valueOf(insertKitten(db, R.drawable.persian, "Persian", 20.f)));
+        Log.i("Entry", String.valueOf(insertKitten(db, R.drawable.siamese, "Siamese", 40.f)));
+        Log.i("Entry", String.valueOf(insertKitten(db, R.drawable.sphynx, "Sphynx", 100.f)));
     }
 
     public static long insertUser(SQLiteDatabase db, String nick, String pwd) {

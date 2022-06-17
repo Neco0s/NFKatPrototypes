@@ -36,16 +36,21 @@ public class NFTsManager {
     private final static long MAX_SIZE = 160000;
 
     public static Bitmap reduceBitmapSize(@NonNull Bitmap bitmap) {
-        double ratioSquare;
-        int bitmapHeight, bitmapWidth;
-        bitmapHeight = bitmap.getHeight();
-        bitmapWidth = bitmap.getWidth();
-        ratioSquare = (double)(bitmapHeight * bitmapWidth) / (double)MAX_SIZE;
-        if (ratioSquare <= 1)
-            return bitmap;
-        double ratio = Math.sqrt(ratioSquare);
-        int requiredHeight = (int) Math.round(bitmapHeight / ratio);
-        int requiredWidth = (int) Math.round(bitmapWidth / ratio);
-        return Bitmap.createScaledBitmap(bitmap, requiredWidth, requiredHeight, true);
+        try {
+            double ratioSquare;
+            int bitmapHeight, bitmapWidth;
+            bitmapHeight = bitmap.getHeight();
+            bitmapWidth = bitmap.getWidth();
+            ratioSquare = (double) (bitmapHeight * bitmapWidth) / (double) MAX_SIZE;
+            if (ratioSquare <= 1)
+                return bitmap;
+            double ratio = Math.sqrt(ratioSquare);
+            int requiredHeight = (int) Math.round(bitmapHeight / ratio);
+            int requiredWidth = (int) Math.round(bitmapWidth / ratio);
+            return Bitmap.createScaledBitmap(bitmap, requiredWidth, requiredHeight, true);
+        } catch(Exception e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 }

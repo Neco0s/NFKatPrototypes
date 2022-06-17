@@ -15,20 +15,20 @@
             android:id="@+id/sell_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Collection"
+            android:text="@string/collection"
             android:layout_marginEnd="10dp"/>
 
         <Button
             android:id="@+id/buy_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Market"/>
+            android:text="@string/market"/>
 
         <Button
             android:id="@+id/refresh_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Refresh"
+            android:text="@string/refresh"
             android:layout_gravity="end"/>
 
     </androidx.appcompat.widget.Toolbar>

@@ -14,7 +14,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@drawable/ic_launcher_background"/>
+            android:src="@drawable/ic_launcher_background"
+            android:contentDescription="@string/recycler_img_desc" />
 
         <RelativeLayout
             android:layout_marginStart="5dp"
@@ -26,38 +27,38 @@
                 android:id="@+id/kat_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Name"
+                android:text="@string/kat_name"
                 android:layout_marginEnd="5dp"/>
 
             <TextView
                 android:id="@+id/kat_btc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="BTC"
+                android:text="@string/short_btc"
                 android:layout_marginEnd="15dp"
                 android:layout_toStartOf="@+id/kat_eur_trend"/>
-
-            <TextView
-                android:id="@+id/kat_eth"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="ETH"
-                android:layout_below="@id/kat_eur"
-                android:layout_alignStart="@+id/kat_btc"/>
 
             <TextView
                 android:id="@+id/kat_eur"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="EUR"
+                android:text="@string/short_eur"
                 android:layout_below="@+id/kat_btc"
                 android:layout_alignStart="@id/kat_btc"/>
+
+            <TextView
+                android:id="@+id/kat_eth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/short_eth"
+                android:layout_below="@id/kat_eur"
+                android:layout_alignStart="@+id/kat_btc"/>
 
             <TextView
                 android:id="@+id/kat_eur_trend"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Trend"
+                android:text="@string/trend"
                 android:layout_below="@id/kat_btc"
                 android:layout_alignParentEnd="true"/>
 
@@ -65,7 +66,7 @@
                 android:id="@+id/kat_eth_trend"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Trend"
+                android:text="@string/trend"
                 android:layout_below="@id/kat_eur"
                 android:layout_alignParentEnd="true"/>
 
@@ -79,6 +80,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/kat_card"
         android:layout_alignParentEnd="true"
-        android:text="Action"/>
+        android:text="@string/action"/>
 
 </RelativeLayout>

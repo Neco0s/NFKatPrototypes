@@ -6,11 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_700">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/game_name"
+            android:textColor="@color/white"
+            android:textSize="45sp"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
     <EditText
         android:id="@+id/edit_user"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Enter nickname"
+        android:hint="@string/username_hint"
         android:inputType="textEmailAddress"
         android:layout_centerHorizontal="true"
         android:layout_above="@+id/edit_pwd"/>
@@ -19,7 +33,7 @@
         android:id="@+id/edit_pwd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Enter your password"
+        android:hint="@string/pwd_hint"
         android:inputType="textPassword"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"/>
@@ -34,14 +48,14 @@
             android:id="@+id/log_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Log in"
+            android:text="@string/log_in"
             android:layout_marginEnd="10dp"/>
 
         <Button
             android:id="@+id/sign_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sign up"
+            android:text="@string/sign_up"
             android:layout_toEndOf="@+id/log_btn"/>
 
     </RelativeLayout>

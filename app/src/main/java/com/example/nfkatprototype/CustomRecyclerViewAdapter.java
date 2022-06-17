@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -98,14 +97,14 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomRecycl
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        ImageView img = (ImageView) holder.versionName.findViewById(R.id.kat_img);
-        TextView name = (TextView) holder.versionName.findViewById(R.id.kat_name);
-        TextView btc = (TextView) holder.versionName.findViewById(R.id.kat_btc);
-        TextView eur = (TextView) holder.versionName.findViewById(R.id.kat_eur);
-        TextView eurTrend = (TextView) holder.versionName.findViewById(R.id.kat_eur_trend);
-        TextView eth = (TextView) holder.versionName.findViewById(R.id.kat_eth);
-        TextView ethTrend = (TextView) holder.versionName.findViewById(R.id.kat_eth_trend);
-        Button action = (Button) holder.versionName.findViewById(R.id.act_btn);
+        ImageView img = holder.versionName.findViewById(R.id.kat_img);
+        TextView name = holder.versionName.findViewById(R.id.kat_name);
+        TextView btc = holder.versionName.findViewById(R.id.kat_btc);
+        TextView eur = holder.versionName.findViewById(R.id.kat_eur);
+        TextView eurTrend = holder.versionName.findViewById(R.id.kat_eur_trend);
+        TextView eth = holder.versionName.findViewById(R.id.kat_eth);
+        TextView ethTrend = holder.versionName.findViewById(R.id.kat_eth_trend);
+        Button action = holder.versionName.findViewById(R.id.act_btn);
 
         img.setImageBitmap(NFTsManager.reduceBitmapSize(BitmapFactory.decodeResource(currentContext.getResources(), katImages.get(position))));
         name.setText(katNames.get(position));

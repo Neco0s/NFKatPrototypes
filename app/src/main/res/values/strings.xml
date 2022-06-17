@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">NFKat Prototype</string>
+    <string name="pwd_hint">Enter your password</string>
+    <string name="log_in">Log in</string>
+    <string name="sign_up">Sign up</string>
+    <string name="game_name">NFKat</string>
+    <string name="username_hint">Enter username</string>
+    <string name="collection">Collection</string>
+    <string name="market">Market</string>
+    <string name="refresh">Refresh</string>
+    <string name="kat_name">Name</string>
+    <string name="short_btc">BTC</string>
+    <string name="short_eur">EUR</string>
+    <string name="short_eth">ETH</string>
+    <string name="trend">Trend</string>
+    <string name="action">Action</string>
+    <string name="recycler_img_desc">Kitten image</string>
 </resources>

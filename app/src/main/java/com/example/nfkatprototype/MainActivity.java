@@ -18,8 +18,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button login = (Button) findViewById(R.id.log_btn);
-        Button signup = (Button) findViewById(R.id.sign_btn);
+        Button login = findViewById(R.id.log_btn);
+        Button signup = findViewById(R.id.sign_btn);
 
         login.setOnClickListener(this);
         signup.setOnClickListener(this);
@@ -27,8 +27,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        EditText editUser = (EditText) findViewById(R.id.edit_user);
-        EditText editPWD = (EditText) findViewById(R.id.edit_pwd);
+        EditText editUser = findViewById(R.id.edit_user);
+        EditText editPWD = findViewById(R.id.edit_pwd);
         String username = editUser.getText().toString();
         String password = editPWD.getText().toString();
 
